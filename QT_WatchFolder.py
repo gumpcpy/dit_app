@@ -72,7 +72,8 @@ class WatcherThread(QThread):
         match = re.search(r'\[(.*?)\]', filename)
         if match and vfx_no:
             bracket_content = match.group(1).replace('#', '')
-            new_filename = f"{bracket_content}_{vfx_no}.mov"
+            # new_filename = f"{bracket_content}_{vfx_no}.mov"
+            new_filename = f"{bracket_content}.mov"
             new_path = os.path.join(os.path.dirname(file_path), new_filename)
             os.rename(file_path, new_path)
             self.file_processed.emit(f"Renamed to: {new_filename}")

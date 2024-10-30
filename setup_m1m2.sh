@@ -1,46 +1,56 @@
 #!/bin/bash
+###
+ # @Author: gumpcpy gumpcpy@gmail.com
+ # @Date: 2024-10-29 18:32:00
+ # @LastEditors: gumpcpy gumpcpy@gmail.com
+ # @LastEditTime: 2024-10-31 04:19:39
+ # @Description: 
+ # 下載Mac M 芯片版本的 miniconda
+ # 安裝虛擬環境 dit
+ # 安裝需要的 packages
+### 
 
-# 设置变量
+# Set Var
 MINICONDA_URL="https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh"
 MINICONDA_PATH="$HOME/miniconda3"
 ENV_NAME="dit"
 REQUIREMENTS_FILE="requirements.txt"
 
-# 检查Miniconda是否已安装
+# Check if Miniconda is installed
 if [ -d "$MINICONDA_PATH" ]; then
-    echo "Miniconda已经安装在 $MINICONDA_PATH"
+    echo "Miniconda已經安裝在 $MINICONDA_PATH"
 else
-    echo "正在下载并安装Miniconda..."
+    echo "正在下載並安裝Miniconda..."
     curl -LO $MINICONDA_URL
     bash Miniconda3-latest-MacOSX-arm64.sh -b -p $MINICONDA_PATH
     rm Miniconda3-latest-MacOSX-arm64.sh
 fi
 
-# 初始化conda
+# Initial conda
 echo "正在初始化conda..."
 source $MINICONDA_PATH/bin/activate
 conda init zsh bash
 
-# 检查虚拟环境是否存在
+# Check if env exist
 if conda info --envs | grep -q $ENV_NAME; then
     echo "环境 $ENV_NAME 已存在,正在删除..."
     conda env remove -n $ENV_NAME -y
 fi
 
-# 创建虚拟环境
-echo "正在创建虚拟环境..."
+# Create env
+echo "正在建立env..."
 conda create -n $ENV_NAME python=3.11 -y
 
-# 激活虚拟环境
-echo "正在激活虚拟环境..."
+# Activate env
+echo "正在activate env..."
 source $MINICONDA_PATH/bin/activate $ENV_NAME
 
-# 安装requirements.txt中的包
-echo "正在安装所需的包..."
+# Install Requirements.txt 
+echo "正在安装Requirement..."
 if [ -f "$REQUIREMENTS_FILE" ]; then
     pip install -r $REQUIREMENTS_FILE
 else
-    echo "警告: $REQUIREMENTS_FILE 文件不存在。跳过包安装。"
+    echo "警告: $REQUIREMENTS_FILE 不存在。跳過安装"
 fi
 
-echo "安装完成！您现在可以使用 'conda activate $ENV_NAME' 来激活环境。"
+echo "安裝完成！现在可以使用 'conda activate $ENV_NAME' Activate Env"

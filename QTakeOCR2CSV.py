@@ -2,7 +2,7 @@
 Author: gumpcpy gumpcpy@gmail.com
 Date: 2024-10-27 15:48:12
 LastEditors: gumpcpy gumpcpy@gmail.com
-LastEditTime: 2024-10-30 15:42:04
+LastEditTime: 2024-10-31 04:22:48
 Description: 
 pip install xattr
 
@@ -162,7 +162,8 @@ def rename_files(input_folder, results):
                 # 移除 '#' 符號
                 bracket_content = bracket_content.replace('#', '')
                 # 構建新的檔名
-                new_filename = f"{bracket_content}_{vfx_no}.mov"
+                # new_filename = f"{bracket_content}_{vfx_no}.mov"
+                new_filename = f"{bracket_content}.mov"
                 old_path = os.path.join(input_folder, old_filename)
                 new_path = os.path.join(input_folder, new_filename)
                 os.rename(old_path, new_path)

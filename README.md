@@ -2,7 +2,7 @@
  * @Author: gumpcpy gumpcpy@gmail.com
  * @Date: 2024-10-29 18:37:21
  * @LastEditors: gumpcpy gumpcpy@gmail.com
- * @LastEditTime: 2024-10-29 18:46:19
+ * @LastEditTime: 2024-10-30 18:31:11
  * @Description: 
 -->
 ## 程式名稱 版本
@@ -10,9 +10,20 @@
     v1.0 (2024-10-29)
     
 ## 程式目的
-    QTake錄製的檔案名稱 Ex.[#sc_SHOT-0490_1_A] db14058e-000497-1.mov
-    希望可以產生csv報表 把sc shot take note 以及識別mov檔案的檔名 
-    可以選擇要不要複製一份檔案 以及直接改名
+    QT_QTakeOCR2CSV
+        的目的是可以指定一個folder，程式會辨識左下角的卡號，以及解析QTake MOV的檔名和標籤顏色
+        然後生成一個 csv檔案，放在folder裡面。
+        有兩個可選項：複製一份原始的檔名的mov到跟他同級的目錄 Ex 20241030 會複製到 20241030_BK
+        以免改變檔名之後發生同檔名覆蓋。
+        另一個選項是修改選擇的folder的檔名。
+
+        QTake錄製的檔案名稱 Ex.[#sc_SHOT-0490_1_A] db14058e-000497-1.mov
+        csv報表 原本的QTake檔名 sc shot take note 以及OCR識別mov獲取的檔名 
+        可以選擇要不要複製一份檔案 以及直接改名
+
+    QT_WatchFolder
+        執行此程式，可選擇一個folder聆聽，如果有新的mov出現在這個folder裡面，就將它複製一份原始擋備份，
+        然後改名字。
     
 ## 安裝方式
     如果是mac intel 芯片 則使用 setup_intel.sh
@@ -23,7 +34,7 @@
 ## 使用方式
 cd 進入有dit_app的目錄
 
-    cd APP_PATH
+    cd YOUR_APP_PATH
     
 啟動虛擬環境
 
@@ -32,5 +43,6 @@ cd 進入有dit_app的目錄
 執行程式
 
     python QT_QTakeOCR2CSV.py
-
+    或者
+    python QT_WatchFolder.py
     

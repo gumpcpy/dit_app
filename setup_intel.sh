@@ -3,8 +3,11 @@
  # @Author: gumpcpy gumpcpy@gmail.com
  # @Date: 2024-10-29 18:30:48
  # @LastEditors: gumpcpy gumpcpy@gmail.com
- # @LastEditTime: 2024-10-31 04:17:34
+ # @LastEditTime: 2024-10-31 04:47:32
  # @Description: 
+ # 下載Mac Intel 芯片版本的 miniconda
+ # 安裝虛擬環境 dit
+ # 安裝需要的 packages
 ### 
 
 # Set Var

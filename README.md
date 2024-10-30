@@ -2,7 +2,7 @@
  * @Author: gumpcpy gumpcpy@gmail.com
  * @Date: 2024-10-29 18:37:21
  * @LastEditors: gumpcpy gumpcpy@gmail.com
- * @LastEditTime: 2024-10-30 18:31:11
+ * @LastEditTime: 2024-10-30 23:43:45
  * @Description: 
 -->
 ## 程式名稱 版本
@@ -25,11 +25,23 @@
         執行此程式，可選擇一個folder聆聽，如果有新的mov出現在這個folder裡面，就將它複製一份原始擋備份，
         然後改名字。
     
-## 安裝方式
+## 安裝方式 
+### (1) 在本機用miniconda 安裝環境
     如果是mac intel 芯片 則使用 setup_intel.sh
     如果是mac m1/m2 芯片 則使用 setup_m1m2.sh
     (要打開這兩個檔案的權限  chmod +x setup_m1m2.sh)
     會安裝 miniconda, 建立虛擬環境:dit, 安裝本專案需要的packages
+### (2) 用 Docker 
+    安裝Docker
+    docker pull dit_app
+    docker run -it --rm -v YOUR_FOLDER_PATH:/app/input dit_app
+    表示 把 YOUR_FOLDER_PATH 掛載到 虛擬機的/input 路徑。
+    
+### (3) 直接拷貝 dit_app.tar
+    打包: docker save -o dit_app.tar dit_app
+    拷貝給人
+    使用者 解開
+        docker  
 
 ## 使用方式
 cd 進入有dit_app的目錄

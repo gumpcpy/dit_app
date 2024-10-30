@@ -2,7 +2,7 @@
 Author: gumpcpy gumpcpy@gmail.com
 Date: 2024-10-31 04:45:03
 LastEditors: gumpcpy gumpcpy@gmail.com
-LastEditTime: 2024-10-31 04:50:58
+LastEditTime: 2024-10-31 05:02:02
 Description: 
 '''
 import sys
@@ -12,7 +12,7 @@ import shutil
 import re
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from QT_QTakeOCR2CSV import OCR_GET_VFXNO
+from QTakeOCR2CSV_QT import OCR_GET_VFXNO
 
 
 class FileHandler(FileSystemEventHandler):

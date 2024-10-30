@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLi
 from PyQt5.QtCore import QThread, pyqtSignal
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
-from QT_QTakeOCR2CSV import OCR_GET_VFXNO
+from QTakeOCR2CSV_QT import OCR_GET_VFXNO
 import shutil
 import re
 

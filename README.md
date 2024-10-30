@@ -2,7 +2,7 @@
  * @Author: gumpcpy gumpcpy@gmail.com
  * @Date: 2024-10-29 18:37:21
  * @LastEditors: gumpcpy gumpcpy@gmail.com
- * @LastEditTime: 2024-10-31 04:56:37
+ * @LastEditTime: 2024-10-31 04:58:49
  * @Description: 
 -->
 ## 程式名稱 版本
@@ -55,7 +55,9 @@ cd 進入有dit_app的目錄
 
 執行程式
 
-    python QT_QTakeOCR2CSV.py
-    或者
-    python QT_WatchFolder.py
+    python QTakeOCR2CSV.py    
+    python WatchFolder.py
+    python QTakeOCR2CSV_QT.py    
+    python WatchFolder_QT.py
+
     

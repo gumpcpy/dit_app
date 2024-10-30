@@ -2,12 +2,12 @@
  * @Author: gumpcpy gumpcpy@gmail.com
  * @Date: 2024-10-29 18:37:21
  * @LastEditors: gumpcpy gumpcpy@gmail.com
- * @LastEditTime: 2024-10-31 04:58:49
+ * @LastEditTime: 2024-10-31 05:05:29
  * @Description: 
 -->
 ## 程式名稱 版本
     dit app
-    v1.0 (2024-10-29)
+    v1.0 (2024-10-31)
     
 ## 程式目的
     QTakeOCR2CSV
@@ -37,7 +37,7 @@
     (要打開這兩個檔案的權限  chmod +x setup_m1m2.sh)
     會安裝 miniconda, 建立虛擬環境:dit, 安裝本專案需要的packages
 
-### (2) 用 Docker 
+### (2) 用 Docker (待發布到Hub上)
     安裝Docker
     docker pull dit_app
     docker run -it --rm -v YOUR_FOLDER_PATH:/app/input dit_app
